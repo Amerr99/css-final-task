@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+
+
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        .hero {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background: linear-gradient(to right, #ff4e50, #1fddff);
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+
+        .about img {
+            width: 300px;
+            border-radius: 10px;
+
+            filter: grayscale(50%) contrast(120%) brightness(90%);
+            transition: 0.3s ease;
+        }
+
+        .about img:hover {
+            filter: none;
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            max-width: 500px;
+        }
+
+        .projects {
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .contact {
+            padding: 30px;
+        }
+
+        .contact form {
+            width: 300px;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        body.dark {
+            background-color: #111;
+            color: white;
+        }
+
+        body.dark .navbar {
+            background-color: black;
+        }
+
+        body.dark .hero {
+            background: linear-gradient(to right, #222, #000);
+        }
+
+        body.dark .about {
+            background-color: #1a1a1a;
+            color: white;
+        }
+        body.dark .projects{
+  background-color: #1a1a1a;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">Amer</div>
+
+
+        <div class="nav-links" id="menu">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <button onclick="toggleDark()">🌙 Dark Mode</button>
+        </div>
+
+        <div class="hamburger">
+            ☰
+        </div>
+
+    </nav>
+
+
+    <div class="hero">
+        <h1>Welcome</h1>
+        <p>Learn Web Development</p>
+    </div>
+
+    <div class="about">
+
+        <img src="cat.jpg" alt="About Image">
+
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+                I am a web developer learning HTML, CSS and JavaScript.
+                I love building modern websites with clean design.
+            </p>
+        </div>
+    </div>
+
+    <section class="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="grid">
+
+            <div class="card red"></div>
+            <div class="card blue"></div>
+            <div class="card green"></div>
+            <div class="card orange"></div>
+            <div class="card purple"></div>
+
+        </div>
+
+    </section>
+
+    <div class="contact">
+
+        <h2>Contact</h2>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button>Send</button>
+        </form>
+
+</body>
+
+<script>
+    function toggleDark() {
+        document.body.classList.toggle("dark");
+    }
+</script>
+
+</html>
