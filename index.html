@@ -113,24 +113,33 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
+
+        :root{
+            --red-color:red;
+            --blue-color:blue;
+            --green-color:green;
+            --orange-color:orange;
+            --purple-color:purple;
+        }
+
         .red {
-            background-color: red;
+            background-color: var(--red-color);
         }
 
         .blue {
-            background-color: blue;
+            background-color: var(--blue-color);
         }
 
         .green {
-            background-color: green;
+            background-color: var(--green-color);
         }
 
         .orange {
-            background-color: orange;
+            background-color: var(--orange-color);
         }
 
         .purple {
-            background-color: purple;
+            background-color: var(--purple-color);
         }
 
         .contact {
@@ -165,8 +174,9 @@
             background-color: #1a1a1a;
             color: white;
         }
-        body.dark .projects{
-  background-color: #1a1a1a;
+
+        body.dark .projects {
+            background-color: #1a1a1a;
             color: white;
         }
     </style>
