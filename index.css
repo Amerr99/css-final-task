@@ -52,10 +52,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: darkblue;
             text-align: center;
             background: linear-gradient(to right, #ff4e50, #1fddff);
+            transition: 1s ease;
         }
+
+      
+.hero:hover {
+    color: white;
+}        
 
         .about {
             display: flex;
